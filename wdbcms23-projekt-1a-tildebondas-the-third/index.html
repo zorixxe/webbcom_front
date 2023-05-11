@@ -1,0 +1,148 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Min startsida!</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&effect=neon|outline|emboss|shadow-multiple"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/foundation.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/progressbar.css" />
+</head>
+
+<body>
+
+    <div class="hidden" id="settings">
+        <div id="settingsBox">
+            <h2>Settings</h2>
+            <div id="X">X</div>
+
+            <p>OpenAI API key</p>
+            <input id="OpenAIKey" type="text" placeholder="OpenAI API key">
+            <p>OpenWeather API key</p>
+            <input id="OpenWeatherKey" type="text" placeholder="OpenWeather API key">
+            <p>ToDo API key</p>
+            <input id="ToDoKey" type="text" placeholder="ToDo API key">
+            <input class="okButton" type="button" value="OK">
+        </div>
+    </div>
+
+    <div class="hidden" id="editWindow">
+        <div id="editBox">
+            <form>
+                <h2>Edit ToDo</h2>
+                <div id="editX">X</div>
+                <input type="text" id="textInput" name="editText" placeholder="Enter text" required>
+                <input type="date" id="dateInput" name="editDate" required>
+                <select id="dropdown" name="editCategory" required>
+                    <option value="1">Undefined</option>
+                    <option value="2">Random</option>
+                    <option value="3">Thingamagigs</option>
+                    <option value="4">Pruttiponger</option>
+                </select>
+                <input type="submit" class="okButton" value="OK">
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <img id="cogwheel" src="cogwheel-svgrepo-com.svg" alt="cogwheel">
+    </div>
+
+
+    <div class="overlordBox">
+        <div class="theBox" id="dogApi">
+            <h2 class="font-effect-neon">Välkommen tillbaka!</h2>
+            <img src="" alt="Random dog">
+        </div>
+
+        <div class="theBox" id="boredApi">
+            <h2>Är du Bored?</h2>
+            <div id="boredText">
+                <p id="activity"></p>
+                <p id="participants"></p>
+            </div>
+
+            <p id="priceText"></p>
+            <div id="price" class="meter orange nostripes">
+                <span></span>
+            </div>
+            <p id="accessibilityText"></p>
+            <div id="accessibility" class="meter orange nostripes">
+                <span></span>
+            </div>
+        </div>
+
+
+        <!-- <div class="theBox" id="dateApi">
+            <h2>Fakta om dagens datum!</h2>
+            <p></p>
+        </div> -->
+
+        <div class="theBox" id="gptAPI">
+            <h2>ChatGPT</h2>
+            <form>
+                <textarea id="gptInput" placeholder="Ask me anything!"></textarea>
+                <input id="gptButton" type="button" value="Send">
+            </form>
+            <p></p>
+        </div>
+
+        <div class="theBox">
+            <h2>Aktuell väderinformation</h2>
+
+            <p class="weatherIcon"></p>
+            <p class="weatherDesc"></p>
+            <p class="temperature"></p>
+            <p class="wind"></p>
+
+        </div>
+
+        <div id="mealAPIbox" class="theBox">
+            <p id="mealAPI"></p>
+
+            <p id="mealAPIThings"></p>
+
+            <p class="hidden" id="mealAPIText"></p>
+        </div>
+
+        <div class="theBox" id="todoAPI">
+            <h1 id="user"></h1>
+            <h2>Todo-lista</h2>
+            <form>
+                <input id="todoInput" type="text" placeholder="Add a todo" required>
+                <input id="todoButton" type="submit" value="Add"><br>
+                <select id="todoCategory" required>
+                    <option value="1" default>Undefined</option>
+                    <option value="2">Random</option>
+                    <option value="3">Thingamagigs</option>
+                    <option value="4">Pruttiponger</option>
+                </select>
+                <input type="date" id="todoDate" name="todoDate" required>
+            </form>
+            <div id="todoList">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="js/app.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+
+</body>
+
+</html>

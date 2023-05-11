@@ -1,0 +1,493 @@
+h1,
+h2,
+h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 25px;
+    margin: 5px;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    background-color: #3f3f3f;
+    font-family: 'Quicksand', sans-serif;
+    color: #3f3f3f;
+    font-weight: 400;
+}
+
+/* Settings styling */
+#cogwheel {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    transition: .2s;
+    z-index: 2;
+}
+
+#cogwheel:hover {
+    width: 60px;
+    height: 60px;
+    transition: .2s;
+}
+
+#settings, #editWindow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+#settingsBox, #editBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 400px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 2;
+}
+
+#settingsBox>*, #editBox>* {
+    color: #3f3f3f;
+}
+
+#settingsBox h2, #editBox h2 {
+    text-align: center;
+    border-bottom: solid;
+    border-color: #cacaca;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+#settingsBox input[type="text"], #editBox input[type="text"] {
+    border-radius: 5px;
+}
+
+.okButton {
+    float: right;
+    width: 100px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.okButton:hover {
+    background-color: #cacaca;
+    transition: .2s;
+}
+
+#X, #editX {
+    color: #888888;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#X:hover {
+    transition: .2s;
+    font-size: 25px;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+
+/* Allmän styling */
+
+.slider {
+    pointer-events: none;
+}
+
+.header {
+    position: absolute;
+    transform: translate(430%, -50%);
+}
+
+/* Widgetstyling */
+.overlordBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: top;
+}
+
+.theBox {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+    margin: 20px;
+    padding: 20px;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 50px;
+}
+
+/* dogAPI styling */
+
+#dogApi {
+    width: 550px;
+    height: 450px;
+}
+
+#dogApi h2 {
+    position: absolute;
+}
+
+#dogApi img {
+    min-width: 130%;
+    min-height: 130%;
+    object-fit: cover;
+}
+
+
+/* boredAPI styling */
+#price,
+#accessibility {
+    width: 90%;
+    margin: 0;
+}
+
+#activity {
+    font-size: 25px;
+    line-height: 1.1;
+}
+
+#boredText {
+    border-style: solid;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+#priceText,
+#accessibilityText {
+    margin-right: auto;
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* dateAPI styling */
+#dateApi {
+    padding: 20px;
+}
+
+
+/* WeatherAPI styling */
+.weatherIcon img {
+    width: 50px;
+    height: 50px;
+}
+
+.weatherDesc,
+.temperature,
+.wind {
+    font-size: 20px;
+    text-align: right;
+}
+
+
+/* mealAPI styling */
+
+#mealAPIbox {
+    width: auto;
+    max-width: none;
+    max-height: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+#mealAPI {
+    width: 350px;
+}
+
+#mealAPI img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#mealAPI img:hover {
+    opacity: 0.8;
+    transition: .2s;
+}
+
+#mealAPI h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#mealText {
+    font-size: 20px;
+    text-align: left;
+    margin: 20px;
+}
+
+
+
+/* gptAPI styling */
+#gptAPI {
+    width: 75%;
+    height: fit-content;
+    max-height: none;
+}
+
+#gptAPI textarea {
+    margin: 0;
+    display: inline-block;
+    height: 50px;
+    width: 75%;
+    resize: none;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid #cacaca;
+    font-size: 14px;
+}
+
+#gptAPI input[type="button"] {
+    vertical-align: top;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #cacaca;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#gptAPI input[type="button"]:hover {
+    background-color: #cacaca;
+    transition: .2s;
+}
+
+#gptAPI p {
+    white-space: pre-wrap;
+    text-align: left;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    max-height: none;
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid #cacaca;
+    background-color: #ffffff;
+    color: rgb(56, 16, 100);
+    padding: 10px;
+    font-size: 14px;
+}
+
+#gptAPI input[type='button'][disabled] {
+    pointer-events: none;
+    background-color: #cacaca;
+    transition: .2s;
+}
+
+#gptAPI form {
+    margin: 10px;
+    width: 100%;
+    height: fit-content;
+}
+
+/* todoAPI styling */
+
+#todoAPI {
+    height: fit-content;
+    max-height: none;
+}
+
+#todoAPI input[type="text"] {
+    margin: 0;
+    display: inline-block;
+    height: 50px;
+    width: 75%;
+    resize: none;
+    border-radius: 10px 0px 0px 0px;
+    border: 1px solid #cacaca;
+    font-size: 14px;
+}
+
+#todoAPI input[type="submit"] {
+    vertical-align: top;
+    height: 50px;
+    width: 25%;
+    border: 1px solid #cacaca;
+    border-radius: 0px 10px 0px 0px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#todoAPI input[type="submit"]:hover {
+    background-color: rgba(255, 225, 225, .3);
+    transition: .2s;
+}
+
+#todoAPI select {
+    margin: 0;
+    display: inline-block;
+    height: 50px;
+    width: 50%;
+    resize: none;
+    border-radius: 0px 0px 0px 10px;
+    border: 1px solid #cacaca;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#todoAPI input[type="date"] {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #cacaca;
+    border-radius: 0px 0px 10px 0px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#todoAPI form {
+    width: 100%;
+    height: fit-content;
+    white-space: nowrap;
+}
+
+#todoList {
+    width: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #cacaca;
+    font-size: 14px;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    white-space: nowrap;
+}
+
+#todoList::-webkit-scrollbar {
+    display: none;
+}
+
+#todoAPI #todoList .todoItem {
+    border-bottom: 1px solid #cacaca;
+    padding: 10px;
+    margin: 0;
+    width:100%;
+    text-align: left;
+}
+
+.todoItemLeft{
+    display:inline-block;
+    margin:0;
+    padding:0;
+    width:50%;
+    cursor:pointer;
+}
+
+#todoAPI #todoList .todoItemLeft:hover {
+    font-weight: 800;
+}
+
+.todoItemRight{
+    display:inline-block;
+    margin:0;
+    padding:0;
+    width:49%;
+    text-align: right;
+
+}
+
+#todoAPI .duedate {
+    display: inline;
+    font-size: 15px;
+}
+
+#todoAPI #category{
+    font-size: inherit;
+}
+
+#todoAPI .delete{
+    font-size: 20px;
+    color: red;
+    font-weight: 800;
+    cursor:pointer;
+    float:right;
+    width: fit-content;
+}
+
+#todoAPI .delete:hover{
+    color: rgb(121, 0, 0);
+    font-weight: 800;
+}
+
+
+.todoTitle{
+    font-size: 20px;
+}
+
+.undefined{
+    background-color: rgb(236, 236, 236);
+
+}
+
+.random{
+    background-color: rgb(255, 201, 101);
+
+}
+
+.thingamagigs{
+    background-color: rgb(255, 101, 173);
+
+}
+
+.pruttiponger{
+    background-color: rgb(101, 181, 255);
+}
